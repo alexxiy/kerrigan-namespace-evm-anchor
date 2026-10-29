@@ -1,4 +1,4 @@
-// State-machine tests for PiNSAnchor, via MockPiNSAnchor so the SP1 verifier is bypassed
+// State-machine tests for KNSAnchor, via MockKNSAnchor so the SP1 verifier is bypassed
 // and the contract's own logic is what is under test.
 //
 // Every state-changing call passes an explicit gasLimit: ganache's eth_estimateGas
@@ -7,8 +7,8 @@
 const ganache = require("ganache");
 const { ethers } = require("ethers");
 const ART = require("./artifacts.json");
-const A = ART["MockPiNSAnchor.sol"].MockPiNSAnchor;
-const REAL = ART["PiNSAnchor.sol"].PiNSAnchor;
+const A = ART["MockKNSAnchor.sol"].MockKNSAnchor;
+const REAL = ART["KNSAnchor.sol"].KNSAnchor;
 const EXPECTING = ART["TestVerifiers.sol"].ExpectingVerifier;
 const ACCEPT_ALL = ART["TestVerifiers.sol"].AcceptAllVerifier;
 

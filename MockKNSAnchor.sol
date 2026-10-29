@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.37;
 
-import "./PiNSAnchor.sol";
+import "./KNSAnchor.sol";
 
-/// @title Mock PiNS Layer-2 Anchor (TESTING ONLY)
-/// @notice Inherits PiNSAnchor and overrides proof verification for SP1_PROVER=mock testing
-contract MockPiNSAnchor is PiNSAnchor {
+/// @title Mock KNS Layer-2 Anchor (TESTING ONLY)
+/// @notice Inherits KNSAnchor and overrides proof verification for SP1_PROVER=mock testing
+contract MockKNSAnchor is KNSAnchor {
     error NotATestChain(uint256 chainId);
 
     /// @dev Refuses to deploy anywhere but a local chain or BSC testnet. This contract
@@ -18,7 +18,7 @@ contract MockPiNSAnchor is PiNSAnchor {
         uint32 _genesisBlockHeight,
         address _sequencer,
         uint64 _rulesTimelock
-    ) PiNSAnchor(_sp1Verifier, _programVkey, _genesisBlockHeight, _sequencer, _rulesTimelock) {
+    ) KNSAnchor(_sp1Verifier, _programVkey, _genesisBlockHeight, _sequencer, _rulesTimelock) {
         if (
             block.chainid != 1337 && // ganache, used by the test suite
             block.chainid != 31337 && // hardhat / anvil

@@ -1,4 +1,4 @@
-// Randomised state-machine check for PiNSAnchor, via MockPiNSAnchor.
+// Randomised state-machine check for KNSAnchor, via MockKNSAnchor.
 //
 // test.js walks through scenarios someone thought of. This drives a seeded random
 // sequence of commits (honest and malformed), rollbacks, rules changes and sequencer
@@ -9,7 +9,7 @@
 const ganache = require("ganache");
 const { ethers } = require("ethers");
 const ART = require("./artifacts.json");
-const A = ART["MockPiNSAnchor.sol"].MockPiNSAnchor;
+const A = ART["MockKNSAnchor.sol"].MockKNSAnchor;
 const ACCEPT_ALL = ART["TestVerifiers.sol"].AcceptAllVerifier;
 
 const GAS = { gasLimit: 900000 };

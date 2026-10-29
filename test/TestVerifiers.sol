@@ -3,7 +3,7 @@ pragma solidity 0.8.37;
 
 /// @title Test-only SP1 verifier stand-in (NEVER DEPLOY)
 /// @notice Accepts exactly one program key, and only proofs spelling "valid". Lets the
-///         real PiNSAnchor - not the mock - show which verifier and key a batch was
+///         real KNSAnchor - not the mock - show which verifier and key a batch was
 ///         checked against, before and after a rules change.
 contract ExpectingVerifier {
     bytes32 public immutable expectedVkey;
